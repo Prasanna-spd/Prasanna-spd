@@ -114,22 +114,23 @@ const Home = () => {
         padding={4}
         margin="4"
         gap="4"
+        gridTemplateRows={["1fr", "1fr 1fr 1fr"]}
       >
         <ShoeCard
           image={img1}
-          name="NIKE"
+          name="Nike"
           price=" ₹ 10000"
           desc="These stylish shoes are a perfect blend of comfort and fashion. Crafted with high-quality materials, they provide all-day support and cushioning, making them ideal for long walks or busy days. The sleek design and trendy colors add a touch of elegance to any outfit, while the durable construction ensures they withstand everyday wear. Step out in confidence and style with these must-have shoes"
         />
         <ShoeCard
           image={img2}
-          name="PUMA"
+          name="Puma"
           price=" ₹ 178000"
           desc="Designed for athletes and fitness enthusiasts, these performance shoes are engineered to enhance your performance and take your workouts to the next level. Featuring advanced technologies, such as responsive cushioning and breathable mesh uppers, they offer optimal comfort and support. Whether you're hitting the gym, going for a run, or participating in sports, these shoes provide the perfect combination of functionality and style."
         />
         <ShoeCard
           image={img3}
-          name="BATA"
+          name="Bata"
           price=" ₹ 30000"
           desc="Elevate your formal attire with these exquisite dress shoes. Handcrafted with precision and attention to detail, they exude sophistication and elegance. Made from premium leather, they boast a timeless design and impeccable craftsmanship. The cushioned insoles and leather linings ensure maximum comfort, while the sleek silhouette and refined finishes make a bold fashion statement. Complete your formal ensemble with these refined shoes."
         />
