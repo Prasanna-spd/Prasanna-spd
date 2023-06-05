@@ -11,11 +11,13 @@ import img1 from "../assets/asset1.jpg";
 import { Link } from "react-router-dom";
 import { FeatureContext } from "./contextmang";
 
-function ShoeCard(props) {
+function ShoeCard({ image, name, price, desc }) {
   const { setSelectedfeature } = useContext(FeatureContext);
-  const handleViewClick = () => {
-    setSelectedfeature(props);
+
+  const handleClick = () => {
+    setSelectedfeature({ name: name, image: image });
   };
+
   return (
     <div>
       <VStack
@@ -36,17 +38,13 @@ function ShoeCard(props) {
           h={"300"}
           objectFit={"contain"}
           alt={"Exchange"}
-          src={props.image}
+          src={image}
         />
-        <Heading>{props.name}</Heading>
-        <Text noOfLines={1}>PRICE:{props.price}</Text>
-        <Text noOfLines={5}>Description:{props.desc}</Text>
+        <Heading>{name}</Heading>
+        <Text noOfLines={1}>PRICE:{price}</Text>
+        <Text noOfLines={5}>Description:{desc}</Text>
 
-        <Button
-          variant={"link"}
-          backgroundColor="purple"
-          onClick={handleViewClick}
-        >
+        <Button variant={"link"} backgroundColor="purple" onClick={handleClick}>
           <Link to="/feature">View</Link>
         </Button>
         <Button variant={"link"} backgroundColor="blue">
