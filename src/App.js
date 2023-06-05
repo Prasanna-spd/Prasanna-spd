@@ -5,6 +5,7 @@ import Login from "./components/login";
 import Signup from "./components/signup";
 import Features from "./components/features";
 import { FeatureProvider } from "./components/contextmang";
+import BasicUsage from "./Modal";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/feature" element={<Features />} />
+              <Route path="/Modal" element={<BasicUsage />} />
             </Routes>
           </Router>
         </Box>
